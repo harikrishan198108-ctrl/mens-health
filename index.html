@@ -1,1200 +1,634 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Discover Nitric Boost — daily support for circulation, stamina and men's vitality. Explore the formula and shop through the official checkout.">
-<title>Nitric Boost | Unlock Your Natural Vitality</title>
+
+<title>A Personal Journey Back to Confidence</title>
 
 <style>
-:root {
-  --navy: #071d35;
-  --blue: #0b477d;
-  --cyan: #19b7d8;
-  --green: #23b67b;
-  --gold: #f5b942;
-  --cream: #f6f9fc;
-  --ink: #10253b;
-  --muted: #637387;
-  --white: #ffffff;
-  --line: #e4ebf2;
-  --shadow: 0 18px 50px rgba(9, 35, 65, .10);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--ink);
-  background: var(--white);
-  line-height: 1.65;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a { text-decoration: none; }
-
-.container {
-  width: min(1140px, calc(100% - 40px));
-  margin: auto;
-}
-
-.topbar {
-  background: #041326;
-  color: #dbe9f4;
-  text-align: center;
-  padding: 9px 15px;
-  font-size: 13px;
-  letter-spacing: .3px;
-}
-
-.nav {
-  padding: 17px 0;
-  background: white;
-  border-bottom: 1px solid var(--line);
-}
-
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-}
-
-.logo {
-  color: var(--navy);
-  font-weight: 900;
-  font-size: 24px;
-  letter-spacing: -1px;
-}
-
-.logo span { color: var(--cyan); }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.nav-links a { color: var(--ink); }
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  border: 0;
-  border-radius: 9px;
-  padding: 16px 28px;
-  font-size: 15px;
-  font-weight: 800;
-  cursor: pointer;
-  text-align: center;
-  transition: transform .2s, box-shadow .2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,.13);
-}
-
-.btn-primary {
-  color: #061a2c;
-  background: var(--gold);
-}
-
-.btn-dark {
-  color: white;
-  background: var(--navy);
-}
-
-.btn-green {
-  color: white;
-  background: var(--green);
-}
-
-.btn-outline {
-  color: var(--navy);
-  border: 1px solid #cad7e3;
-  background: white;
-}
-
-.btn-large {
-  padding: 19px 34px;
-  font-size: 17px;
-  border-radius: 10px;
-}
-
-.hero {
-  background:
-    radial-gradient(circle at 90% 10%, rgba(25,183,216,.20), transparent 32%),
-    linear-gradient(135deg, #061a31, #0b385c);
-  color: white;
-  padding: 80px 0 88px;
-  overflow: hidden;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.03fr .97fr;
-  align-items: center;
-  gap: 55px;
-}
-
-.eyebrow {
-  display: inline-block;
-  background: rgba(255,255,255,.11);
-  border: 1px solid rgba(255,255,255,.22);
-  color: #a9f0fa;
-  padding: 7px 13px;
-  border-radius: 30px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  margin: 19px 0;
-  font-size: clamp(38px, 5vw, 62px);
-  line-height: 1.08;
-  letter-spacing: -2px;
-}
-
-.hero h1 span { color: #48d4e6; }
-
-.hero p {
-  color: #d2e1ed;
-  font-size: 17px;
-  max-width: 550px;
-}
-
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-  margin: 29px 0 20px;
-}
-
-.hero-note {
-  font-size: 12px;
-  color: #b4ccdc;
-}
-
-.hero-visual {
-  position: relative;
-  min-width: 0;
-}
-
-.photo-frame {
-  background: white;
-  border: 8px solid rgba(255,255,255,.14);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 20px 70px rgba(0,0,0,.28);
-}
-
-.photo-frame img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  background: #f2f6f8;
-}
-
-.image-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 360px;
-  padding: 30px;
-  text-align: center;
-  color: #53697b;
-  background: #edf4f7;
-}
-
-.image-placeholder strong {
-  font-size: 19px;
-  color: var(--navy);
-}
-
-.image-placeholder small {
-  margin-top: 8px;
-}
-
-.hero-badge {
-  position: absolute;
-  bottom: -22px;
-  left: -25px;
-  background: white;
-  color: var(--navy);
-  border-radius: 14px;
-  padding: 15px 19px;
-  box-shadow: var(--shadow);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.hero-badge b {
-  color: var(--green);
-  font-size: 19px;
-}
-
-.trust-strip {
-  background: #f2f7fa;
-  border-bottom: 1px solid var(--line);
-  padding: 22px 0;
-}
-
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  text-align: center;
-}
-
-.trust-item {
-  font-size: 13px;
-  color: #536b7d;
-  font-weight: 700;
-}
-
-.trust-item strong {
-  display: block;
-  color: var(--navy);
-  font-size: 15px;
-  margin-bottom: 2px;
-}
-
-.section {
-  padding: 90px 0;
-}
-
-.section-light { background: var(--cream); }
-
-.section-heading {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 48px;
-}
-
-.section-heading .eyebrow {
-  color: var(--blue);
-  background: #e4f4f8;
-  border-color: #ccebf1;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fafafa;
+    color:#202020;
+    line-height:1.6;
 }
 
-.section-heading h2 {
-  font-size: clamp(30px, 4vw, 43px);
-  line-height: 1.15;
-  margin: 14px 0;
-  letter-spacing: -1px;
-  color: var(--navy);
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
 }
 
-.section-heading p {
-  color: var(--muted);
-  font-size: 16px;
-}
+/* HERO */
 
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  align-items: center;
+.hero{
+    background:linear-gradient(135deg,#101010,#292929);
+    color:white;
+    padding:75px 20px;
+    text-align:center;
 }
 
-.intro-photo {
-  border-radius: 20px;
-  overflow: hidden;
-  background: #eef4f8;
-  box-shadow: var(--shadow);
+.hero .tag{
+    display:inline-block;
+    background:#d4af37;
+    color:#111;
+    padding:7px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:13px;
+    margin-bottom:20px;
 }
 
-.intro-photo img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
+.hero h1{
+    font-size:48px;
+    line-height:1.12;
+    max-width:850px;
+    margin:0 auto 22px;
 }
 
-.intro-copy h2 {
-  color: var(--navy);
-  font-size: 35px;
-  line-height: 1.2;
-  margin-top: 0;
+.hero h1 span{
+    color:#d4af37;
 }
 
-.intro-copy p { color: var(--muted); }
-
-.check-list {
-  list-style: none;
-  padding: 0;
-  margin: 25px 0;
+.hero p{
+    max-width:720px;
+    margin:auto;
+    font-size:20px;
+    color:#e5e5e5;
 }
 
-.check-list li {
-  display: flex;
-  gap: 12px;
-  margin: 13px 0;
-  font-weight: 700;
+.cta{
+    display:inline-block;
+    margin-top:32px;
+    background:#e63946;
+    color:white;
+    text-decoration:none;
+    padding:17px 38px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 8px 25px rgba(0,0,0,.3);
+    transition:.2s;
 }
 
-.check-list li::before {
-  content: "✓";
-  color: var(--green);
-  font-size: 21px;
-  font-weight: 900;
+.cta:hover{
+    transform:translateY(-2px);
 }
 
-.benefit-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
+/* STORY */
 
-.benefit-card {
-  padding: 28px;
-  border: 1px solid var(--line);
-  border-radius: 15px;
-  background: white;
-  transition: transform .2s, box-shadow .2s;
+.story{
+    background:white;
+    padding:75px 20px;
 }
 
-.benefit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
+.story-box{
+    max-width:800px;
+    margin:auto;
 }
 
-.benefit-icon {
-  display: grid;
-  place-items: center;
-  width: 53px;
-  height: 53px;
-  background: #e9f8fb;
-  border-radius: 13px;
-  font-size: 26px;
-  margin-bottom: 19px;
+.story h2{
+    font-size:36px;
+    margin-bottom:25px;
+    text-align:center;
 }
 
-.benefit-card h3 {
-  color: var(--navy);
-  margin: 0 0 9px;
-  font-size: 19px;
+.story p{
+    font-size:18px;
+    margin-bottom:22px;
+    color:#444;
 }
 
-.benefit-card p {
-  color: var(--muted);
-  font-size: 14px;
-  margin: 0;
+.highlight{
+    background:#fff7df;
+    border-left:5px solid #d4af37;
+    padding:22px;
+    margin:30px 0;
+    font-size:20px;
+    font-weight:bold;
 }
 
-.how-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
+/* EMOTIONAL */
 
-.step {
-  text-align: center;
-  padding: 28px;
-  border-radius: 15px;
-  background: white;
-  border: 1px solid var(--line);
+.emotional{
+    background:#f1f3f5;
+    padding:70px 20px;
 }
 
-.step-number {
-  margin: auto;
-  display: grid;
-  place-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: white;
-  font-size: 22px;
-  font-weight: 900;
+.emotional h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:45px;
 }
 
-.step h3 { color: var(--navy); }
-
-.step p {
-  color: var(--muted);
-  font-size: 14px;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.formula {
-  background: var(--navy);
-  color: white;
+.card{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
 }
-
-.formula .section-heading h2 { color: white; }
-.formula .section-heading p { color: #c2d4e4; }
 
-.formula-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 17px;
+.card h3{
+    font-size:21px;
+    margin-bottom:12px;
 }
 
-.formula-card {
-  border: 1px solid rgba(255,255,255,.13);
-  background: rgba(255,255,255,.07);
-  border-radius: 13px;
-  padding: 24px;
+.card p{
+    color:#555;
 }
 
-.formula-card .ingredient-icon {
-  font-size: 31px;
-  margin-bottom: 10px;
-}
+/* TURNING POINT */
 
-.formula-card h3 {
-  font-size: 17px;
-  margin: 0 0 8px;
+.turning{
+    background:#171717;
+    color:white;
+    padding:80px 20px;
+    text-align:center;
 }
 
-.formula-card p {
-  color: #c3d6e6;
-  font-size: 13px;
-  margin: 0;
+.turning h2{
+    font-size:40px;
+    margin-bottom:20px;
 }
 
-.quality-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.turning p{
+    max-width:760px;
+    margin:0 auto 20px;
+    color:#ddd;
+    font-size:18px;
 }
 
-.quality-card {
-  border: 1px solid var(--line);
-  border-radius: 15px;
-  padding: 28px;
-  text-align: center;
-}
+/* BENEFITS */
 
-.quality-card .icon {
-  font-size: 30px;
-  margin-bottom: 8px;
+.benefits{
+    padding:75px 20px;
+    background:white;
 }
-
-.quality-card h3 { color: var(--navy); }
 
-.quality-card p {
-  color: var(--muted);
-  font-size: 14px;
+.benefits h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:45px;
 }
 
-.offer {
-  background:
-    radial-gradient(circle at 15% 20%, rgba(25,183,216,.14), transparent 35%),
-    linear-gradient(135deg, #061a31, #0b385c);
-  color: white;
+.benefit-grid{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
 }
 
-.offer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  align-items: center;
+.benefit{
+    border:1px solid #e5e5e5;
+    border-radius:12px;
+    padding:25px;
+    background:#fff;
 }
 
-.offer h2 {
-  font-size: clamp(32px, 4vw, 46px);
-  line-height: 1.15;
-  margin: 0 0 20px;
+.benefit strong{
+    display:block;
+    font-size:19px;
+    margin-bottom:8px;
 }
 
-.offer p { color: #c6d9e8; }
-
-.offer-list {
-  list-style: none;
-  padding: 0;
-  margin: 25px 0;
+.benefit span{
+    color:#555;
 }
 
-.offer-list li {
-  margin: 10px 0;
-  color: #e4f2f9;
-}
+/* STORY QUOTE */
 
-.offer-list li::before {
-  content: "✓";
-  color: #56dfae;
-  margin-right: 10px;
-  font-weight: 900;
+.quote{
+    padding:75px 20px;
+    background:#fff7df;
+    text-align:center;
 }
 
-.offer-card {
-  background: white;
-  color: var(--navy);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+.quote blockquote{
+    max-width:800px;
+    margin:auto;
+    font-size:30px;
+    line-height:1.4;
+    font-weight:bold;
+    color:#252525;
 }
 
-.offer-card .photo-frame {
-  border: 0;
-  box-shadow: none;
-  margin-bottom: 20px;
+.quote p{
+    margin-top:18px;
+    color:#666;
 }
 
-.offer-card .photo-frame img {
-  aspect-ratio: 4 / 3;
-}
+/* CTA */
 
-.offer-card h3 {
-  font-size: 25px;
-  margin: 0 0 10px;
+.final-cta{
+    padding:80px 20px;
+    background:linear-gradient(135deg,#111,#292929);
+    color:white;
+    text-align:center;
 }
 
-.offer-card p {
-  color: var(--muted);
-  font-size: 13px;
+.final-cta h2{
+    font-size:40px;
+    max-width:800px;
+    margin:auto auto 18px;
 }
 
-.offer-card .btn { width: 100%; }
-
-.secure-note {
-  font-size: 12px;
-  color: #718394;
-  margin-top: 15px;
+.final-cta p{
+    max-width:700px;
+    margin:auto;
+    color:#ddd;
+    font-size:18px;
 }
 
-.faq-list {
-  max-width: 820px;
-  margin: auto;
-}
+/* DISCLAIMER */
 
-.faq-item {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  background: white;
+.disclaimer{
+    background:#f5f5f5;
+    padding:35px 20px;
 }
 
-.faq-item summary {
-  cursor: pointer;
-  padding: 19px 22px;
-  font-weight: 800;
-  color: var(--navy);
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
+.disclaimer p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#777;
+    font-size:12px;
+    line-height:1.7;
 }
 
-.faq-item summary::after {
-  content: "+";
-  color: var(--cyan);
-  font-size: 22px;
-}
+/* MOBILE */
 
-.faq-item[open] summary::after { content: "−"; }
+@media(max-width:768px){
 
-.faq-answer {
-  padding: 0 22px 20px;
-  color: var(--muted);
-  font-size: 14px;
-}
+    .hero{
+        padding:55px 18px;
+    }
 
-.disclaimer {
-  background: #f0f4f7;
-  border-top: 1px solid var(--line);
-  padding: 28px 0;
-  font-size: 12px;
-  color: #697a8a;
-}
+    .hero h1{
+        font-size:35px;
+    }
 
-.disclaimer p { margin: 8px 0; }
+    .hero p{
+        font-size:17px;
+    }
 
-.footer {
-  background: #041326;
-  color: #bdccda;
-  padding: 40px 0;
-  text-align: center;
-  font-size: 13px;
-}
+    .story{
+        padding:55px 18px;
+    }
 
-.footer .logo { color: white; margin-bottom: 12px; }
+    .story h2,
+    .emotional h2,
+    .benefits h2{
+        font-size:29px;
+    }
 
-.footer a { color: #b8e9f1; }
+    .cards{
+        grid-template-columns:1fr;
+    }
 
-.mobile-cta { display: none; }
+    .benefit-grid{
+        grid-template-columns:1fr;
+    }
 
-@media (max-width: 900px) {
-  .hero-grid, .intro-grid, .offer-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
+    .turning h2,
+    .final-cta h2{
+        font-size:30px;
+    }
 
-  .hero { padding: 55px 0 70px; }
-  .hero-visual { max-width: 550px; width: 100%; margin: auto; }
-  .intro-photo { max-width: 600px; margin: auto; }
-  .offer-card { max-width: 550px; margin: auto; width: 100%; }
-  .benefit-grid { grid-template-columns: repeat(2, 1fr); }
-  .formula-grid { grid-template-columns: repeat(2, 1fr); }
-  .quality-grid { grid-template-columns: repeat(2, 1fr); }
-  .nav-links a:not(.btn) { display: none; }
-}
+    .quote blockquote{
+        font-size:23px;
+    }
 
-@media (max-width: 560px) {
-  .container { width: min(100% - 28px, 1140px); }
-  .nav { padding: 13px 0; }
-  .logo { font-size: 21px; }
-  .nav-links .btn { padding: 11px 14px; font-size: 12px; }
-  .hero h1 { font-size: 38px; letter-spacing: -1px; }
-  .hero p { font-size: 15px; }
-  .hero-buttons { flex-direction: column; }
-  .hero-buttons .btn { width: 100%; }
-  .hero-badge { left: 8px; bottom: -18px; }
-  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 8px; }
-  .section { padding: 60px 0; }
-  .section-heading { margin-bottom: 30px; }
-  .section-heading h2 { font-size: 30px; }
-  .benefit-grid, .how-grid, .formula-grid, .quality-grid { grid-template-columns: 1fr; }
-  .benefit-card, .formula-card, .quality-card { padding: 24px; }
-  .intro-copy h2 { font-size: 30px; }
-  .offer-grid { gap: 30px; }
-  .offer-card { padding: 20px; }
-  .mobile-cta {
-    display: block;
-    position: sticky;
-    bottom: 0;
-    z-index: 10;
-    background: white;
-    padding: 10px 14px;
-    border-top: 1px solid var(--line);
-  }
-  .mobile-cta .btn { width: 100%; }
+    .cta{
+        width:100%;
+        max-width:360px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  ✦ Discover Nitric Boost — Explore the Formula & Shop Through the Official Checkout
-</div>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a href="#" class="logo">NITRIC<span>BOOST</span></a>
-    <nav class="nav-links">
-      <a href="#benefits">Benefits</a>
-      <a href="#formula">Formula</a>
-      <a href="#faq">FAQ</a>
-      <a href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
-         class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-        Shop Now →
-      </a>
-    </nav>
-  </div>
-</header>
+<!-- HERO -->
 
 <section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">Daily Men's Vitality Support</span>
-      <h1>Feel Stronger.<br>Live With <span>Confidence.</span></h1>
-      <p>
-        Discover Nitric Boost — a daily dietary supplement designed to support
-        nitric oxide production, healthy circulation and everyday vitality.
-        Build a consistent wellness routine that supports the way you want to live.
-      </p>
+<div class="container">
 
-      <div class="hero-buttons">
-        <a href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
-           class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
-          Explore Nitric Boost →
-        </a>
-        <a href="#benefits" class="btn btn-outline btn-large">
-          Discover Benefits
-        </a>
-      </div>
+<div class="tag">A MEN'S CONFIDENCE STORY</div>
 
-      <div class="hero-note">
-        ✓ Explore the formula &nbsp;|&nbsp; ✓ Convenient daily routine
-      </div>
-    </div>
+<h1>
+I Thought I Had Lost
+<span>My Confidence Forever.</span>
+</h1>
 
-    <div class="hero-visual">
-      <div class="photo-frame">
-        <!-- PHOTO 1: Replace product-1.jpg with your first product photo -->
-        <img src="product-1.jpg"
-             alt="Nitric Boost product photo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="image-placeholder" style="display:none;">
-          <strong>YOUR PRODUCT PHOTO 1</strong>
-          <small>Save your first photo as product-1.jpg</small>
-        </div>
-      </div>
+<p>
+For a long time, I was afraid of being close to my own wife.
+Not because I didn't love her...
+but because I was scared I wouldn't be able to perform the way I wanted.
+</p>
 
-      <div class="hero-badge">
-        <b>Daily</b><br>Vitality Support
-      </div>
-    </div>
-  </div>
+<a class="cta"
+href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
+target="_blank"
+rel="noopener noreferrer">
+LEARN MORE →
+</a>
+
+</div>
 </section>
 
-<div class="trust-strip">
-  <div class="container trust-grid">
-    <div class="trust-item">
-      <strong>Daily Routine</strong>
-      Easy to incorporate
-    </div>
-    <div class="trust-item">
-      <strong>Plant-Based Formula</strong>
-      Explore the ingredients
-    </div>
-    <div class="trust-item">
-      <strong>Men's Wellness</strong>
-      Designed for adult men
-    </div>
-    <div class="trust-item">
-      <strong>Official Checkout</strong>
-      Shop with confidence
-    </div>
-  </div>
+
+<!-- STORY -->
+
+<section class="story">
+
+<div class="story-box">
+
+<h2>
+This Is The Part I Never Wanted To Talk About
+</h2>
+
+<p>
+I still remember those nights.
+My wife would come close to me, and instead of feeling excited, I would feel nervous.
+</p>
+
+<p>
+I loved her deeply.
+I wanted to make her feel special.
+I wanted that closeness between us.
+</p>
+
+<p>
+But sometimes my body simply didn't respond the way I wanted it to.
+</p>
+
+<div class="highlight">
+The hardest part wasn't just what was happening physically.
+It was what it was doing to my confidence.
 </div>
 
-<section class="section">
-  <div class="container intro-grid">
-    <div class="intro-photo">
-      <!-- PHOTO 2: Replace product-2.jpg with your second product photo -->
-      <img src="product-2.jpg"
-           alt="Nitric Boost second product photo"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-      <div class="image-placeholder" style="display:none;">
-        <strong>YOUR PRODUCT PHOTO 2</strong>
-        <small>Save your second photo as product-2.jpg</small>
-      </div>
-    </div>
+<p>
+I started avoiding intimate moments.
+I would make excuses.
+I would say I was tired.
+I would tell myself that tomorrow would be different.
+</p>
 
-    <div class="intro-copy">
-      <span class="eyebrow">Meet Nitric Boost</span>
-      <h2>Support Your Body's Natural Potential</h2>
-      <p>
-        Nitric oxide plays an important role in the body's blood-vessel
-        function and circulation. Nitric Boost is presented as a daily
-        supplement for adult men who want to support an active lifestyle,
-        stamina and overall vitality.
-      </p>
-      <p>
-        Make it part of a balanced routine that includes good nutrition,
-        regular movement, quality sleep and healthy habits.
-      </p>
+<p>
+But tomorrow kept becoming another tomorrow.
+</p>
 
-      <ul class="check-list">
-        <li>Supports healthy nitric oxide production</li>
-        <li>Designed for everyday men's wellness</li>
-        <li>Supports circulation and physical performance</li>
-        <li>Convenient daily supplementation</li>
-      </ul>
+<p>
+And slowly, something changed between us.
+Not because we stopped loving each other...
+but because I started carrying a fear that I couldn't explain.
+</p>
 
-      <a href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
-         class="btn btn-dark" target="_blank" rel="noopener noreferrer">
-        Explore the Official Offer →
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section section-light" id="benefits">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Why Explore Nitric Boost?</span>
-      <h2>Designed Around Your Everyday Vitality</h2>
-      <p>
-        Learn how the formula is positioned to support your wellness goals.
-        Individual results may vary.
-      </p>
-    </div>
-
-    <div class="benefit-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon">🩸</div>
-        <h3>Healthy Circulation</h3>
-        <p>
-          Nitric oxide helps regulate blood-vessel relaxation.
-          Nitric Boost is designed to support healthy circulation as part
-          of an active lifestyle.
-        </p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon">💪</div>
-        <h3>Stamina & Endurance</h3>
-        <p>
-          Support your exercise and daily activity routine with a formula
-          built around ingredients commonly studied for physical performance.
-        </p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon">⚡</div>
-        <h3>Daily Vitality</h3>
-        <p>
-          Build consistent wellness habits and support your body's natural
-          processes without relying on exaggerated promises.
-        </p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon">❤️</div>
-        <h3>Men's Wellness</h3>
-        <p>
-          Explore a supplement designed for adult men's everyday vitality,
-          confidence and an active lifestyle.
-        </p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon">🎯</div>
-        <h3>Consistent Routine</h3>
-        <p>
-          A convenient daily supplement can fit alongside balanced nutrition,
-          exercise, rest and other healthy habits.
-        </p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon">🌿</div>
-        <h3>Ingredient-Focused</h3>
-        <p>
-          Explore the formula's ingredients and their intended roles before
-          deciding whether it fits your personal wellness routine.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Simple Daily Approach</span>
-      <h2>Make Wellness a Habit</h2>
-      <p>
-        A supplement works best as one part of a broader healthy lifestyle.
-      </p>
-    </div>
-
-    <div class="how-grid">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Explore the Formula</h3>
-        <p>
-          Review the product label, ingredients and directions on the
-          official product page.
-        </p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Follow the Label</h3>
-        <p>
-          Use the product only as directed. Do not exceed the recommended
-          serving.
-        </p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Stay Consistent</h3>
-        <p>
-          Pair your routine with movement, balanced meals, sleep and
-          healthy everyday choices.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section formula" id="formula">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Inside the Formula</span>
-      <h2>Explore the Key Ingredients</h2>
-      <p>
-        Nitric Boost is associated with ingredients used in nitric oxide,
-        circulation and men's vitality supplement formulas. Check the
-        current official label for exact amounts and ingredients.
-      </p>
-    </div>
-
-    <div class="formula-grid">
-      <div class="formula-card">
-        <div class="ingredient-icon">🌱</div>
-        <h3>L-Arginine</h3>
-        <p>
-          An amino acid used by the body in nitric oxide production.
-        </p>
-      </div>
-
-      <div class="formula-card">
-        <div class="ingredient-icon">💧</div>
-        <h3>L-Citrulline</h3>
-        <p>
-          An amino acid involved in the body's arginine and nitric oxide
-          pathways.
-        </p>
-      </div>
-
-      <div class="formula-card">
-        <div class="ingredient-icon">🥬</div>
-        <h3>Beetroot</h3>
-        <p>
-          A dietary nitrate source commonly explored for circulation and
-          exercise performance.
-        </p>
-      </div>
-
-      <div class="formula-card">
-        <div class="ingredient-icon">🍃</div>
-        <h3>Ginkgo Biloba</h3>
-        <p>
-          A botanical traditionally used in wellness products focused on
-          circulation and cognitive support.
-        </p>
-      </div>
-
-      <div class="formula-card">
-        <div class="ingredient-icon">🌿</div>
-        <h3>Horny Goat Weed</h3>
-        <p>
-          A botanical commonly included in men's vitality and libido
-          supplement formulas.
-        </p>
-      </div>
-
-      <div class="formula-card">
-        <div class="ingredient-icon">🌾</div>
-        <h3>Dong Quai</h3>
-        <p>
-          A traditional botanical ingredient found in some herbal wellness
-          formulas.
-        </p>
-      </div>
-
-      <div class="formula-card">
-        <div class="ingredient-icon">⚗️</div>
-        <h3>D-Aspartic Acid</h3>
-        <p>
-          An amino acid studied in relation to reproductive hormones and
-          men's health.
-        </p>
-      </div>
-
-      <div class="formula-card">
-        <div class="ingredient-icon">🔬</div>
-        <h3>Niacin (B3)</h3>
-        <p>
-          A vitamin that contributes to normal energy-yielding metabolism.
-        </p>
-      </div>
-    </div>
-
-    <p style="text-align:center;color:#adc5d8;font-size:12px;margin-top:30px;">
-      Ingredient information is for general education. Verify the actual
-      current Nitric Boost product label before purchase.
-    </p>
-  </div>
-</section>
-
-<section class="section section-light">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">A Thoughtful Choice</span>
-      <h2>What to Look For Before You Buy</h2>
-      <p>
-        Make an informed decision by reviewing the official product
-        information and your own wellness needs.
-      </p>
-    </div>
-
-    <div class="quality-grid">
-      <div class="quality-card">
-        <div class="icon">📋</div>
-        <h3>Read the Label</h3>
-        <p>
-          Check serving size, ingredients, amounts and directions on the
-          official product label.
-        </p>
-      </div>
-
-      <div class="quality-card">
-        <div class="icon">🔎</div>
-        <h3>Review the Details</h3>
-        <p>
-          Check current pricing, shipping information and purchase terms
-          before completing your order.
-        </p>
-      </div>
-
-      <div class="quality-card">
-        <div class="icon">🩺</div>
-        <h3>Ask Your Doctor</h3>
-        <p>
-          Consult a healthcare professional before using supplements,
-          especially if you take medication or have a medical condition.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section offer" id="order">
-  <div class="container offer-grid">
-    <div>
-      <span class="eyebrow">Your Next Step</span>
-      <h2>Explore Nitric Boost Today</h2>
-      <p>
-        Ready to learn more? Visit the official checkout to explore the
-        current offer, product details and available purchase options.
-      </p>
-
-      <ul class="offer-list">
-        <li>Review the current product information</li>
-        <li>Check available purchase options</li>
-        <li>Review shipping and refund terms</li>
-        <li>Make an informed purchase decision</li>
-      </ul>
-
-      <a href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
-         class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
-        Visit Official Checkout →
-      </a>
-    </div>
-
-    <div class="offer-card">
-      <div class="photo-frame">
-        <!-- SECOND PHOTO ALSO USED IN THE OFFER CARD -->
-        <img src="product-2.jpg"
-             alt="Nitric Boost product"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="image-placeholder" style="display:none;min-height:240px;">
-          <strong>PRODUCT PHOTO 2</strong>
-          <small>Replace product-2.jpg</small>
-        </div>
-      </div>
-
-      <h3>Nitric Boost</h3>
-      <p>
-        Explore the official product page for current details and
-        purchase options.
-      </p>
-
-      <a href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
-         class="btn btn-green btn-large" target="_blank" rel="noopener noreferrer">
-        Check Availability & Offer →
-      </a>
-
-      <div class="secure-note">
-        🔒 You will be redirected to the linked checkout page.
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="faq">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Questions & Answers</span>
-      <h2>Frequently Asked Questions</h2>
-      <p>Learn more before exploring the official product offer.</p>
-    </div>
-
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>What is Nitric Boost?</summary>
-        <div class="faq-answer">
-          Nitric Boost is a dietary supplement marketed for adult men's
-          vitality and nitric oxide support. Review the official product
-          label for the current formula and intended use.
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>How should I use Nitric Boost?</summary>
-        <div class="faq-answer">
-          Follow the serving instructions printed on the current official
-          product label. Do not exceed the recommended serving. If you
-          have questions about using supplements, consult a healthcare
-          professional.
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>How quickly will I see results?</summary>
-        <div class="faq-answer">
-          Results vary from person to person. There is no guaranteed
-          timeline for individual results. Avoid assuming that a supplement
-          will produce immediate or specific performance outcomes.
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Is Nitric Boost suitable for everyone?</summary>
-        <div class="faq-answer">
-          No supplement is suitable for everyone. Adults who are pregnant,
-          have medical conditions, take prescription medication or have
-          concerns about supplement interactions should consult a qualified
-          healthcare professional before use. Keep supplements away from
-          children.
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Where can I learn more or purchase?</summary>
-        <div class="faq-answer">
-          Use the purchase buttons on this page to visit the supplied
-          ClickBank checkout link. Review the current product details,
-          price, shipping and applicable refund terms before ordering.
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Is this product a treatment for a medical condition?</summary>
-        <div class="faq-answer">
-          No. This landing page does not make a diagnosis or treatment
-          claim. Nitric Boost is presented as a dietary supplement.
-          Consult a healthcare professional for medical concerns.
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="logo">NITRIC<span>BOOST</span></div>
-    <p>Support your everyday wellness journey.</p>
-    <p>
-      <a href="#faq">FAQ</a> &nbsp;|&nbsp;
-      <a href="#formula">Formula</a> &nbsp;|&nbsp;
-      <a href="#order">Order Information</a>
-    </p>
-    <p>© 2026 Nitric Boost. All rights reserved.</p>
-  </div>
-</footer>
-
-<div class="mobile-cta">
-  <a href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
-     class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-    Explore Nitric Boost →
-  </a>
 </div>
+
+</section>
+
+
+<!-- EMOTIONAL -->
+
+<section class="emotional">
+
+<div class="container">
+
+<h2>
+I Started Asking Myself Difficult Questions
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>“Is Something Wrong With Me?”</h3>
+<p>
+I started questioning myself and my body. Every unsuccessful moment made the next one feel even more stressful.
+</p>
+</div>
+
+<div class="card">
+<h3>“Does She Still Feel Wanted?”</h3>
+<p>
+I worried that my wife might think I wasn't attracted to her anymore. The truth was completely different.
+</p>
+</div>
+
+<div class="card">
+<h3>“Will Things Ever Feel Normal Again?”</h3>
+<p>
+I missed the confidence I used to have. More than anything, I wanted to stop being afraid of intimacy.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TURNING POINT -->
+
+<section class="turning">
+
+<div class="container">
+
+<h2>
+Then I Started Looking For Answers
+</h2>
+
+<p>
+Instead of ignoring the problem, I decided to learn more about men's sexual health, circulation, lifestyle and the role nitric oxide can play in normal vascular function.
+</p>
+
+<p>
+That's when I came across a nutritional approach designed around ingredients commonly discussed in men's wellness and nitric-oxide support.
+</p>
+
+<p>
+I didn't expect a miracle.
+I simply wanted to understand whether there was something I could add to my overall routine.
+</p>
+
+<a class="cta"
+href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
+target="_blank"
+rel="noopener noreferrer">
+SEE WHAT I DISCOVERED →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+<div class="container">
+
+<h2>
+Why Men Are Looking At Nitric-Oxide Support
+</h2>
+
+<div class="benefit-grid">
+
+<div class="benefit">
+<strong>❤️ Support Healthy Circulation</strong>
+<span>
+Healthy blood flow is an important part of normal sexual function.
+</span>
+</div>
+
+<div class="benefit">
+<strong>⚡ Support Everyday Energy</strong>
+<span>
+A healthy lifestyle, nutrition and regular activity can all contribute to overall energy and wellbeing.
+</span>
+</div>
+
+<div class="benefit">
+<strong>💪 Support Men's Wellness</strong>
+<span>
+A nutritional routine can be part of a broader approach to men's health and confidence.
+</span>
+</div>
+
+<div class="benefit">
+<strong>🔥 Support Intimacy & Confidence</strong>
+<span>
+Feeling healthier and more confident can make intimacy feel less stressful and more enjoyable.
+</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EMOTIONAL QUOTE -->
+
+<section class="quote">
+
+<blockquote>
+“I didn't just want to feel better physically.
+I wanted to stop feeling afraid of being close to the woman I love.”
+</blockquote>
+
+<p>
+— Illustrative personal story
+</p>
+
+</section>
+
+
+<!-- SECOND STORY -->
+
+<section class="story">
+
+<div class="story-box">
+
+<h2>
+What Changed For Me Wasn't Just Physical
+</h2>
+
+<p>
+The biggest difference was that I finally stopped pretending the problem didn't exist.
+</p>
+
+<p>
+I started paying more attention to my health.
+I became more conscious about my lifestyle, movement, nutrition and the things I was putting into my body.
+</p>
+
+<p>
+And I started exploring nutritional support for nitric oxide and healthy circulation.
+</p>
+
+<p>
+Most importantly, I started talking openly with my wife instead of hiding behind excuses.
+</p>
+
+<div class="highlight">
+Sometimes the first step toward getting your confidence back is simply admitting that you want things to change.
+</div>
+
+<p>
+If you're going through something similar, don't automatically assume that you're alone or that you simply have to accept it.
+Persistent erection problems can sometimes be associated with underlying health conditions, so speaking with a qualified healthcare professional is important.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+<div class="container">
+
+<h2>
+Maybe It's Time To Stop Ignoring The Conversation
+</h2>
+
+<p>
+Learn more about the nutritional approach I came across and decide for yourself whether it fits into your men's wellness routine.
+</p>
+
+<a class="cta"
+href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
+target="_blank"
+rel="noopener noreferrer">
+DISCOVER MORE →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- DISCLAIMER -->
+
+<section class="disclaimer">
+
+<p>
+DISCLAIMER: This page is for informational purposes only and is not intended to diagnose, treat, cure, or prevent any disease or medical condition. The story presented on this page is an illustrative marketing story and should not be interpreted as a real customer testimonial or guarantee of results. Individual results may vary. Dietary supplements are not a substitute for professional medical advice. If you have persistent erectile difficulties, cardiovascular conditions, or take prescription medications, consult a qualified healthcare professional before using any supplement. Some sexual-enhancement supplements may interact with medications or contain undeclared ingredients. 
+</p>
+
+</section>
+
+
+<script>
+
+/* Make every CTA open the affiliate link */
+document.querySelectorAll(".cta").forEach(function(button){
+    button.addEventListener("click", function(){
+        // Affiliate destination
+    });
+});
+
+</script>
 
 </body>
 </html>
