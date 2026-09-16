@@ -3,620 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>A Personal Journey Back to Confidence</title>
-
+<title>A Story About Confidence</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#fafafa;
-    color:#202020;
-    line-height:1.6;
-}
-
-.container{
-    width:92%;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* HERO */
-
-.hero{
-    background:linear-gradient(135deg,#101010,#292929);
-    color:white;
-    padding:75px 20px;
-    text-align:center;
-}
-
-.hero .tag{
-    display:inline-block;
-    background:#d4af37;
-    color:#111;
-    padding:7px 18px;
-    border-radius:30px;
-    font-weight:bold;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:48px;
-    line-height:1.12;
-    max-width:850px;
-    margin:0 auto 22px;
-}
-
-.hero h1 span{
-    color:#d4af37;
-}
-
-.hero p{
-    max-width:720px;
-    margin:auto;
-    font-size:20px;
-    color:#e5e5e5;
-}
-
-.cta{
-    display:inline-block;
-    margin-top:32px;
-    background:#e63946;
-    color:white;
-    text-decoration:none;
-    padding:17px 38px;
-    border-radius:8px;
-    font-size:18px;
-    font-weight:bold;
-    box-shadow:0 8px 25px rgba(0,0,0,.3);
-    transition:.2s;
-}
-
-.cta:hover{
-    transform:translateY(-2px);
-}
-
-/* STORY */
-
-.story{
-    background:white;
-    padding:75px 20px;
-}
-
-.story-box{
-    max-width:800px;
-    margin:auto;
-}
-
-.story h2{
-    font-size:36px;
-    margin-bottom:25px;
-    text-align:center;
-}
-
-.story p{
-    font-size:18px;
-    margin-bottom:22px;
-    color:#444;
-}
-
-.highlight{
-    background:#fff7df;
-    border-left:5px solid #d4af37;
-    padding:22px;
-    margin:30px 0;
-    font-size:20px;
-    font-weight:bold;
-}
-
-/* EMOTIONAL */
-
-.emotional{
-    background:#f1f3f5;
-    padding:70px 20px;
-}
-
-.emotional h2{
-    text-align:center;
-    font-size:36px;
-    margin-bottom:45px;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:14px;
-    box-shadow:0 8px 25px rgba(0,0,0,.07);
-}
-
-.card h3{
-    font-size:21px;
-    margin-bottom:12px;
-}
-
-.card p{
-    color:#555;
-}
-
-/* TURNING POINT */
-
-.turning{
-    background:#171717;
-    color:white;
-    padding:80px 20px;
-    text-align:center;
-}
-
-.turning h2{
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-.turning p{
-    max-width:760px;
-    margin:0 auto 20px;
-    color:#ddd;
-    font-size:18px;
-}
-
-/* BENEFITS */
-
-.benefits{
-    padding:75px 20px;
-    background:white;
-}
-
-.benefits h2{
-    text-align:center;
-    font-size:36px;
-    margin-bottom:45px;
-}
-
-.benefit-grid{
-    max-width:900px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.benefit{
-    border:1px solid #e5e5e5;
-    border-radius:12px;
-    padding:25px;
-    background:#fff;
-}
-
-.benefit strong{
-    display:block;
-    font-size:19px;
-    margin-bottom:8px;
-}
-
-.benefit span{
-    color:#555;
-}
-
-/* STORY QUOTE */
-
-.quote{
-    padding:75px 20px;
-    background:#fff7df;
-    text-align:center;
-}
-
-.quote blockquote{
-    max-width:800px;
-    margin:auto;
-    font-size:30px;
-    line-height:1.4;
-    font-weight:bold;
-    color:#252525;
-}
-
-.quote p{
-    margin-top:18px;
-    color:#666;
-}
-
-/* CTA */
-
-.final-cta{
-    padding:80px 20px;
-    background:linear-gradient(135deg,#111,#292929);
-    color:white;
-    text-align:center;
-}
-
-.final-cta h2{
-    font-size:40px;
-    max-width:800px;
-    margin:auto auto 18px;
-}
-
-.final-cta p{
-    max-width:700px;
-    margin:auto;
-    color:#ddd;
-    font-size:18px;
-}
-
-/* DISCLAIMER */
-
-.disclaimer{
-    background:#f5f5f5;
-    padding:35px 20px;
-}
-
-.disclaimer p{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    color:#777;
-    font-size:12px;
-    line-height:1.7;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .hero{
-        padding:55px 18px;
-    }
-
-    .hero h1{
-        font-size:35px;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    .story{
-        padding:55px 18px;
-    }
-
-    .story h2,
-    .emotional h2,
-    .benefits h2{
-        font-size:29px;
-    }
-
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .benefit-grid{
-        grid-template-columns:1fr;
-    }
-
-    .turning h2,
-    .final-cta h2{
-        font-size:30px;
-    }
-
-    .quote blockquote{
-        font-size:23px;
-    }
-
-    .cta{
-        width:100%;
-        max-width:360px;
-    }
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#222;line-height:1.75}
+.wrap{max-width:900px;margin:auto;padding:0 22px}
+.hero{background:#111;color:#fff;padding:55px 0 45px;text-align:center}
+.hero h1{font-size:42px;line-height:1.15;margin:0 auto 18px;max-width:760px}
+.hero p{font-size:19px;color:#ddd;max-width:700px;margin:auto}
+.btn{display:inline-block;margin-top:25px;background:#e53935;color:#fff;text-decoration:none;padding:15px 30px;border-radius:6px;font-weight:700;font-size:17px}
+.photo{padding:35px 0 10px;text-align:center}
+.photo img{width:100%;max-width:760px;border-radius:10px;display:block;margin:auto}
+.story{padding:45px 0}
+.story h2{font-size:32px;line-height:1.25;margin:0 0 25px}
+.story p{font-size:18px;margin:0 0 22px;color:#444}
+.quote{margin:32px 0;padding:25px;border-left:5px solid #d4af37;background:#faf7ed;font-size:22px;font-weight:700}
+.center{text-align:center}
+.section{padding:50px 0;background:#f7f7f7}
+.section h2{text-align:center;font-size:30px;margin:0 0 28px}
+.points{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.point{background:#fff;padding:22px;border:1px solid #e7e7e7;border-radius:8px}
+.point h3{margin:0 0 8px;font-size:19px}
+.point p{margin:0;color:#555}
+.final{background:#151515;color:#fff;text-align:center;padding:55px 0}
+.final h2{font-size:32px;line-height:1.25;margin:0 auto 12px;max-width:700px}
+.final p{color:#ddd;max-width:680px;margin:auto}
+.disclaimer{font-size:12px;color:#777;background:#f3f3f3;padding:25px 0;line-height:1.55}
+@media(max-width:650px){
+.hero h1{font-size:32px}
+.story h2,.final h2{font-size:27px}
+.story p{font-size:17px}
+.points{grid-template-columns:1fr}
 }
 </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-
 <section class="hero">
-<div class="container">
-
-<div class="tag">A MEN'S CONFIDENCE STORY</div>
-
-<h1>
-I Thought I Had Lost
-<span>My Confidence Forever.</span>
-</h1>
-
-<p>
-For a long time, I was afraid of being close to my own wife.
-Not because I didn't love her...
-but because I was scared I wouldn't be able to perform the way I wanted.
-</p>
-
-<a class="cta"
-href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
-target="_blank"
-rel="noopener noreferrer">
-LEARN MORE →
-</a>
-
+<div class="wrap">
+<h1>I Thought I Had Lost My Confidence Forever</h1>
+<p>A personal story about love, confidence, intimacy, and the moment I decided to stop ignoring what was happening.</p>
+<a class="btn" href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr" target="_blank" rel="noopener noreferrer">LEARN MORE</a>
 </div>
 </section>
 
-
-<!-- STORY -->
+<section class="photo">
+<div class="wrap">
+<img src="a_long_dramatic_emotionally_driven_landing_page.png" alt="Emotional couple story image">
+</div>
+</section>
 
 <section class="story">
+<div class="wrap">
 
-<div class="story-box">
+<h2>The Story I Never Wanted To Tell Anyone</h2>
 
-<h2>
-This Is The Part I Never Wanted To Talk About
-</h2>
+<p>For a long time, I kept something completely private. From the outside, my life looked normal. I had a wife I loved, a home, work, responsibilities and all the usual things that keep life moving.</p>
 
-<p>
-I still remember those nights.
-My wife would come close to me, and instead of feeling excited, I would feel nervous.
-</p>
+<p>But behind closed doors, I had started losing confidence in myself.</p>
 
-<p>
-I loved her deeply.
-I wanted to make her feel special.
-I wanted that closeness between us.
-</p>
+<p>I remember the first few times it happened. My wife and I would get close, and I wanted everything to feel natural. I wanted to make her happy. I wanted to feel like myself again. But my body simply didn't respond the way I expected.</p>
 
-<p>
-But sometimes my body simply didn't respond the way I wanted it to.
-</p>
+<p>I tried not to think about it. I told myself it was probably stress. Maybe I was tired. Maybe I had been working too much. I thought the next time would be different.</p>
 
-<div class="highlight">
-The hardest part wasn't just what was happening physically.
-It was what it was doing to my confidence.
+<p>But then it happened again.</p>
+
+<div class="quote">“The hardest part wasn't only what was happening physically. It was the fear and embarrassment that started growing inside me.”</div>
+
+<p>After a while, I began avoiding intimate moments. If my wife came close, I would sometimes find an excuse to turn away. I said I was exhausted. I said I had a headache. Sometimes I simply went to sleep earlier.</p>
+
+<p>She didn't deserve that distance.</p>
+
+<p>And I knew it.</p>
+
+<p>I loved my wife. I was attracted to her. I wanted that closeness. I wanted to make her feel loved and wanted. But every time I thought about intimacy, another thought came into my head:</p>
+
+<p><strong>“What if it happens again?”</strong></p>
+
+<p>That one question became bigger than everything else.</p>
+
+<p>I started wondering if I was getting older too quickly. I wondered whether something had changed inside my body. I even wondered whether my wife thought I wasn't attracted to her anymore.</p>
+
+<p>Those thoughts were painful because none of them were true.</p>
+
+<p>The truth was much simpler: I was scared.</p>
+
+<p>Scared of disappointing her.</p>
+
+<p>Scared of feeling embarrassed again.</p>
+
+<p>Scared that this was simply going to become my new normal.</p>
+
+<h2>One Night Made Me Finally Face The Problem</h2>
+
+<p>One evening, after another uncomfortable moment between us, I could see the sadness on my wife's face. She didn't blame me. She didn't make a scene. She simply became quiet.</p>
+
+<p>That silence stayed with me.</p>
+
+<p>I realized I couldn't keep pretending everything was fine.</p>
+
+<p>I didn't want to lose the emotional connection we had because I was too embarrassed to talk about what I was experiencing.</p>
+
+<p>So I started researching.</p>
+
+<p>I read about men's health, circulation, lifestyle, nutrition and the role nitric oxide plays in normal blood-vessel function. I learned that sexual function can be connected with many different aspects of overall health, and that persistent erection problems are worth discussing with a healthcare professional.</p>
+
+<p>During that search, I also came across nutritional products marketed around nitric-oxide and men's wellness support.</p>
+
+<p>I didn't expect a magic solution.</p>
+
+<p>I wasn't looking for some overnight miracle.</p>
+
+<p>I simply wanted to learn more and find something that could fit alongside the healthier changes I was already trying to make.</p>
+
+<a class="btn" href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr" target="_blank" rel="noopener noreferrer">SEE WHAT I DISCOVERED</a>
+
+<h2 style="margin-top:55px">I Started Looking At The Bigger Picture</h2>
+
+<p>I began paying more attention to my daily routine. I worked on getting better sleep. I became more conscious of what I ate. I tried to move more instead of sitting all day. And I stopped treating the subject like something I had to be ashamed of.</p>
+
+<p>Most importantly, I started communicating with my wife.</p>
+
+<p>That conversation changed something inside me.</p>
+
+<p>I realized intimacy wasn't a performance test. It wasn't about proving that I was “a man.” It was about connection, trust, affection and being able to talk honestly with the person I loved.</p>
+
+<p>That realization took away some of the pressure I had been carrying.</p>
+
+<p>And the more I learned about men's wellness and circulation, the more interested I became in nutritional support built around nitric-oxide pathways.</p>
+
+<div class="quote">“I wasn't searching for a miracle. I was searching for hope — and for a reason to believe I could feel confident again.”</div>
+
+<p>That was the turning point for me.</p>
+
+<p>I stopped hiding.</p>
+
+<p>I stopped blaming myself.</p>
+
+<p>And I started taking my overall health seriously.</p>
+
+<h2>Why I Decided To Learn More</h2>
+
+<p>The nutritional approach I found was interesting to me because it focused on ingredients and nutrients associated with men's wellness and healthy circulation.</p>
+
+<p>For me, that was enough reason to investigate it further rather than immediately believing every promise I saw online.</p>
+
+<p>I wanted to understand what it contained, how it was intended to be used, and whether it made sense for my own situation.</p>
+
+<p>If you're reading this because you've experienced something similar, I understand why you may be looking for answers too.</p>
+
+<p>You may be feeling embarrassed.</p>
+
+<p>You may be avoiding intimacy.</p>
+
+<p>You may be wondering whether your confidence will ever come back.</p>
+
+<p>But you don't have to keep the conversation locked inside your head.</p>
+
+<p>Learn more, look at the ingredients and claims carefully, and make an informed decision about what is appropriate for you.</p>
+
 </div>
-
-<p>
-I started avoiding intimate moments.
-I would make excuses.
-I would say I was tired.
-I would tell myself that tomorrow would be different.
-</p>
-
-<p>
-But tomorrow kept becoming another tomorrow.
-</p>
-
-<p>
-And slowly, something changed between us.
-Not because we stopped loving each other...
-but because I started carrying a fear that I couldn't explain.
-</p>
-
-</div>
-
 </section>
 
-
-<!-- EMOTIONAL -->
-
-<section class="emotional">
-
-<div class="container">
-
-<h2>
-I Started Asking Myself Difficult Questions
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>“Is Something Wrong With Me?”</h3>
-<p>
-I started questioning myself and my body. Every unsuccessful moment made the next one feel even more stressful.
-</p>
+<section class="section">
+<div class="wrap">
+<h2>What I Was Looking For</h2>
+<div class="points">
+<div class="point"><h3>Healthy Circulation</h3><p>I wanted to learn more about the relationship between circulation, nitric oxide and normal sexual function.</p></div>
+<div class="point"><h3>Men's Wellness</h3><p>I wanted an approach that could fit into a broader routine of nutrition, movement, sleep and healthy habits.</p></div>
+<div class="point"><h3>Confidence</h3><p>I wanted to stop letting fear control my relationship and my decisions.</p></div>
+<div class="point"><h3>A Better Conversation</h3><p>I wanted to communicate openly with my wife instead of hiding behind excuses.</p></div>
 </div>
-
-<div class="card">
-<h3>“Does She Still Feel Wanted?”</h3>
-<p>
-I worried that my wife might think I wasn't attracted to her anymore. The truth was completely different.
-</p>
 </div>
-
-<div class="card">
-<h3>“Will Things Ever Feel Normal Again?”</h3>
-<p>
-I missed the confidence I used to have. More than anything, I wanted to stop being afraid of intimacy.
-</p>
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-
-<!-- TURNING POINT -->
-
-<section class="turning">
-
-<div class="container">
-
-<h2>
-Then I Started Looking For Answers
-</h2>
-
-<p>
-Instead of ignoring the problem, I decided to learn more about men's sexual health, circulation, lifestyle and the role nitric oxide can play in normal vascular function.
-</p>
-
-<p>
-That's when I came across a nutritional approach designed around ingredients commonly discussed in men's wellness and nitric-oxide support.
-</p>
-
-<p>
-I didn't expect a miracle.
-I simply wanted to understand whether there was something I could add to my overall routine.
-</p>
-
-<a class="cta"
-href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
-target="_blank"
-rel="noopener noreferrer">
-SEE WHAT I DISCOVERED →
-</a>
-
+<section class="final">
+<div class="wrap">
+<h2>Maybe It's Time To Stop Ignoring The Conversation</h2>
+<p>If you're curious about the nutritional approach I discovered, take a closer look and decide for yourself whether it belongs in your men's wellness routine.</p>
+<a class="btn" href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr" target="_blank" rel="noopener noreferrer">DISCOVER MORE</a>
 </div>
-
 </section>
 
-
-<!-- BENEFITS -->
-
-<section class="benefits">
-
-<div class="container">
-
-<h2>
-Why Men Are Looking At Nitric-Oxide Support
-</h2>
-
-<div class="benefit-grid">
-
-<div class="benefit">
-<strong>❤️ Support Healthy Circulation</strong>
-<span>
-Healthy blood flow is an important part of normal sexual function.
-</span>
+<section class="disclaimer">
+<div class="wrap center">
+<p>DISCLAIMER: This page is for informational purposes only. The story is an illustrative marketing story and is not a real customer testimonial or a guarantee of results. Individual results vary. This content is not intended to diagnose, treat, cure or prevent any disease or medical condition. Dietary supplements are not a substitute for professional medical advice. Persistent erection difficulties can have underlying health causes; consult a qualified healthcare professional, especially if you take prescription medicines or have cardiovascular or other medical conditions.</p>
 </div>
-
-<div class="benefit">
-<strong>⚡ Support Everyday Energy</strong>
-<span>
-A healthy lifestyle, nutrition and regular activity can all contribute to overall energy and wellbeing.
-</span>
-</div>
-
-<div class="benefit">
-<strong>💪 Support Men's Wellness</strong>
-<span>
-A nutritional routine can be part of a broader approach to men's health and confidence.
-</span>
-</div>
-
-<div class="benefit">
-<strong>🔥 Support Intimacy & Confidence</strong>
-<span>
-Feeling healthier and more confident can make intimacy feel less stressful and more enjoyable.
-</span>
-</div>
-
-</div>
-
-</div>
-
 </section>
-
-
-<!-- EMOTIONAL QUOTE -->
-
-<section class="quote">
-
-<blockquote>
-“I didn't just want to feel better physically.
-I wanted to stop feeling afraid of being close to the woman I love.”
-</blockquote>
-
-<p>
-— Illustrative personal story
-</p>
-
-</section>
-
-
-<!-- SECOND STORY -->
-
-<section class="story">
-
-<div class="story-box">
-
-<h2>
-What Changed For Me Wasn't Just Physical
-</h2>
-
-<p>
-The biggest difference was that I finally stopped pretending the problem didn't exist.
-</p>
-
-<p>
-I started paying more attention to my health.
-I became more conscious about my lifestyle, movement, nutrition and the things I was putting into my body.
-</p>
-
-<p>
-And I started exploring nutritional support for nitric oxide and healthy circulation.
-</p>
-
-<p>
-Most importantly, I started talking openly with my wife instead of hiding behind excuses.
-</p>
-
-<div class="highlight">
-Sometimes the first step toward getting your confidence back is simply admitting that you want things to change.
-</div>
-
-<p>
-If you're going through something similar, don't automatically assume that you're alone or that you simply have to accept it.
-Persistent erection problems can sometimes be associated with underlying health conditions, so speaking with a qualified healthcare professional is important.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- FINAL CTA -->
-
-<section class="final-cta">
-
-<div class="container">
-
-<h2>
-Maybe It's Time To Stop Ignoring The Conversation
-</h2>
-
-<p>
-Learn more about the nutritional approach I came across and decide for yourself whether it fits into your men's wellness routine.
-</p>
-
-<a class="cta"
-href="https://hop.clickbank.net/?vendor=noboost&pid=17&affiliate=juneonly&tid=adsr"
-target="_blank"
-rel="noopener noreferrer">
-DISCOVER MORE →
-</a>
-
-</div>
-
-</section>
-
-<script>
-
-/* Make every CTA open the affiliate link */
-document.querySelectorAll(".cta").forEach(function(button){
-    button.addEventListener("click", function(){
-        // Affiliate destination
-    });
-});
-
-</script>
 
 </body>
 </html>
